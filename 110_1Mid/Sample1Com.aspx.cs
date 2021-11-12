@@ -20,6 +20,18 @@ namespace _110_1Mid {
                     {
                         lb_Msg.Text = lb_Msg.Text + "網頁廣告"+ "<br>";
                     }
+                    if (Request.Form.Get("cl_Inter") == "電視")
+                    {
+                        lb_Msg.Text = lb_Msg.Text + "電視" + "<br>";
+                    }
+                    if (Request.Form.Get("cl_Inter") == "其他")
+                    {
+                        lb_Msg.Text = lb_Msg.Text + "其他" + "<br>";
+                    }
+
+                    lb_Msg.Text += Request.Form.Get("tb_Num") + "<br>";
+                    lb_Msg.Text += Request.Form.Get("hd_Num") + "<br>";
+                    lb_Msg.Text += mt_2MD5(Request.Form.Get("tb_Num")) ;
                 }
             }
         }
